@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tabs {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.tab-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  transition: color 0.5s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tab-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: red;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.tab-link:hover::before {
+  width: 100%;
+}
+
+.tab-link.active {
+  font-weight: bold;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.table thead {
+  background: #f2f2f2;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.chart {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.bar-inner {
+  background: #36a2eb;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.labels {
+  margin-left: 80px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.value {
+  color: #fff;
+  font-size: 18px;
+  padding: 4px;
 }

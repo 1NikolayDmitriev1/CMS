@@ -1,6 +1,7 @@
 {
   "name": "cms",
   "version": "0.2.0",
+  "homepage": "https://1nikolaydmitriev1.github.io/CMS/",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.17.0",
@@ -16,8 +17,8 @@
   },
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "npx webpack --mode production",
-    "deploy": "gh-pages -d dist",
+    "build": "npx webpack --mode development",
+    "deploy": "gh-pages -d dist -r https://github.com/1NikolayDmitriev1/CMS.git",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

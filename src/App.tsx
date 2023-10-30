@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Tabs from "./components/Tabs";
 import tabData from "./tabs.json";
 import "./App.css";
@@ -11,7 +11,7 @@ const App: React.FC = () => {
   );
 
   return (
-    <BrowserRouter basename="/CMS">
+    <HashRouter>
       <Routes>
         <Route path="/:tabId" element={<Tabs tabs={sortedTabs} />} />
         <Route
@@ -19,7 +19,7 @@ const App: React.FC = () => {
           element={<Navigate to={`/${sortedTabs[0].id}`} replace />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

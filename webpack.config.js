@@ -7,7 +7,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    clean:true
+    clean:true,
+    publicPath: '/CMS/'
   },
   module: {
     rules: [
@@ -32,9 +33,9 @@ module.exports = {
   ],
   devServer: {
     open: true,
-    port: 3000, 
-    devMiddleware: {
-      publicPath: '/CMS/',
-    }
+    historyApiFallback: {
+      index: '/CMS/'
+    },
+    port: 3000
   }
 };

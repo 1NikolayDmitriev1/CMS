@@ -34,7 +34,7 @@ body {
   width: 100%;
 }
 
-.tab-link.active {
+.active {
   font-weight: bold;
 }
 .table {

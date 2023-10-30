@@ -19,10 +19,10 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
         {tabs.map((tab: Tab) => (
           <NavLink
             key={tab.id}
-            to={`/${tab.id}`}
+            to={`/CMS/${tab.id}`}
             className={
               selectedTab.id === tab.id
-                ? "tab-link tab-link.active"
+                ? "tab-link active"
                 : "tab-link"
             }
           >

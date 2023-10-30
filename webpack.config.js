@@ -31,6 +31,10 @@ module.exports = {
     })
   ],
   devServer: {
-    historyApiFallback: true,
+    open: true,
+    port: 3000, 
+    devMiddleware: {
+      publicPath: '/CMS/',
+    }
   }
 };

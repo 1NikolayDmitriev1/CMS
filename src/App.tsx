@@ -11,12 +11,12 @@ const App: React.FC = () => {
   );
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/CMS">
       <Routes>
-        <Route path="/CMS/:tabId" element={<Tabs tabs={sortedTabs} />} />
+        <Route path="/:tabId" element={<Tabs tabs={sortedTabs} />} />
         <Route
           path="/"
-          element={<Navigate to={`/CMS/${sortedTabs[0].id}`} replace />}
+          element={<Navigate to={`/${sortedTabs[0].id}`} replace />}
         />
       </Routes>
     </BrowserRouter>

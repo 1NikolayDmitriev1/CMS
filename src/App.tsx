@@ -13,10 +13,10 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="CMS/:tabId" element={<Tabs tabs={sortedTabs} />} />
+        <Route path="/CMS/:tabId" element={<Tabs tabs={sortedTabs} />} />
         <Route
           path="/"
-          element={<Navigate to={`CMS/${sortedTabs[0].id}`} replace />}
+          element={<Navigate to={`/CMS/${sortedTabs[0].id}`} replace />}
         />
       </Routes>
     </BrowserRouter>
